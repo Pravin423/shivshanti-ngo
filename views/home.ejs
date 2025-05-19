@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGO Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/public/css/homepage.css">
+
+</head>
+<style>
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .animate-slide-in {
+    animation: slideIn 1s ease-out forwards;
+  }
+</style>
+
+<body class="bg-gray-100">
+  <header><%- include('partials/navbar') %></header>
+
+  <!-- Hero Section -->
+  <div class="relative bg-cover h-[681px] w-screen mx-auto" style="background-image: url('/images/backgroundcheck2.jpg')">
+    <div class="flex items-start px-10 pt-20">
+      <section class="w-[700px]">
+        <h1 class="text-white text-6xl font-bold leading-tight animate-slide-in">
+          Everyday <br />
+          we Take <br />
+          A small Step <br />
+          To <span class="text-orange-500">Bright Future</span>.
+        </h1>
+      
+        <p class="text-white mt-4 text-lg animate-slide-in" style="animation-delay: 0.3s;">
+          Your Help Matters, No Matter How Big Or Small.
+        </p>
+      </section>
+
+    </div>
+    <div class="pr-10 mt-16 text-center">
+      <img src="/images/Statistics.png" alt="" class="inline-block" />
+    </div>
+  </div>
+  <div class="py-24"></div>
+
+  <!-- About Section -->
+   <center>
+    <div class="w-[1400px] justify-center  mx-auto flex">
+      <div class="w-[700px] px-8">
+        <img src="/images/know us.png" alt="know about us">
+        <h2 class="text-[48px] font-bold mt-4">"Empowering Lives, <br> Uplifting Communities"</h2>
+        <h3 class="text-[48px] font-bold mt-4">
+          <span class="text-orange-500 text-stroke">Clean</span>,
+          <span class="text-gray-400 text-stroke">Educate</span>,
+          <span class="text-green-500 text-stroke">Inspire</span>!
+        </h3>
+        <p class="text-gray-700 mt-4 w-[605px]">
+          Driven by our vision to balance nature and culture, SHIVSHANTI
+          PRATISTHAN is dedicated to transforming the way we interact with our
+          surroundings. From clean-up campaigns to community outreach, every step
+          is a step toward a brighter future.
+        </p>
+        <br><br>
+        <a href="/"><button class="bg-green-500 text-white border-2 border-green-700 px-6 py-2 mt-4 rounded">Learn more</button></a>
+      </div>
+      <div class="w-[700px] px-20">
+        <img src="/images/real work real change.png" alt="Tree plantation event" class="rounded-lg shadow-lg" />
+       
+      </div>
+    </div>
+  
+   </center>
+  
+  <!-- Snake Section -->
+  <div class="py-24"></div>
+  <center>
+    <div class="w-[100] ml-[200px] text-center">
+      <img src="/images/snakenew1.png" alt="">
+    </div>
+  </center>
+  
+
+  <!-- Projects Section -->
+  <div class="py-24"></div>
+  <div class="w-[1301px] mx-auto text-center">
+    <img src="/images/project_have_done.png" alt="project done">
+    <br><br><br>
+    <h1 class="text-4xl font-bold text-[#1a1d29]">Helping hands, hopeful hearts – working for a better world.</h1>
+    <br><br><br>
+    <div class="flex justify-evenly text-center">
+      <div class=" project1 bg-gray-800 w-[410px] h-[421px] rounded-[12px] shadow-lg"
+        style="background-image: url('/images/Project11.png')">
+        <h2 class="text-3xl font-bold text-white ml-0 mt-[100px]">Go Green Revolution</h2>
+        <br>
+        <p class="text-white mt-[50px] w-[310px] ml-[45px]"> Over 3500 Plants Planted: As part of the "Go Green
+          Revolution," more than 3500 trees have been planted across various regions.</p>
+        <button class="bg-white  text-black border-2 border-black-700 px-6 py-2 mt-4 rounded">See more</button>
+      </div>
+      <div class=" project2 bg-gray-800 w-[410px] h-[421px] rounded-[12px] shadow-lg"
+        style="background-image: url('/images/Project22.png')">
+        <h2 class="text-3xl font-bold text-white ml-0 mt-[100px]">Lakes Cleaned</h2>
+        <br>
+        <p class="text-white mt-[50px] w-[310px] ml-[45px]"> Lakes cleaned in various locations, including pre- and
+          post-Chhath Pooja, to ensure the community's environmental sustainability.</p>
+        <button class="bg-white text-black border-2 border-black-700 px-6 py-2 mt-4 rounded">See more</button>
+      </div>
+      <div class=" project3 bg-gray-800 w-[410px] h-[421px] rounded-[12px] shadow-lg"
+        style="background-image: url('/images/Project33.png')">
+        <h2 class="text-3xl font-bold text-white ml-0 mt-[50px]">Personal Vehicle Transformed into an Ambulance</h2>
+        <br>
+        <p class="text-white mt-[20px] w-[310px] ml-[45px]"> During the COVID-19 crisis, Mr. Vinay Kumar Singh converted
+          his own car into an ambulance, providing free emergency transportation to over 55 patients in need.</p>
+        <button class="bg-white text-black border-2 border-black-700 px-6 py-2 mt-4 rounded">See more</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%- include('partials/footer') %>
+
+</body>
+
+</html>

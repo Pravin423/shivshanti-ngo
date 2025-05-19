@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/public/css/homepage.css" />
+    <link rel="stylesheet" href="/public/css/about.css" />
+    <style>
+
+.gallery-img {
+    width: 370px; /* Adjust width as needed */
+    height: 370px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+}
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+        }
+
+        .modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md py-4 text-center">
+        <%- include('partials/navbar') %>
+    </header>
+    <section class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-4xl font-extrabold text-green-600 text-center mb-6 uppercase tracking-widest">Planting</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="/images/planting1.jpg" alt="Planting 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting2.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting3.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting4.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting5.jpg" alt="Cleaning 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting6.jpg" alt="Planting 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting7.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting8.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting9.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting10.jpg" alt="Cleaning 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting11.jpg" alt="Planting 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting12.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting13.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting14.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting15.jpg" alt="Cleaning 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting16.jpg" alt="Planting 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting17.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting18.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting19.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting20.jpg" alt="Cleaning 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting21.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting22.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/planting23.png" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            
+            
+        </div>
+    </section>
+    <section class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-4xl font-extrabold text-gray-500 text-center mb-6 uppercase tracking-widest"> Cleaning</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="/images/clean1.jpg" alt="Planting 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean2.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean3.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean4.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean5.jpg" alt="Cleaning 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean6.jpg" alt="Planting 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean7.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean8.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean9.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean10.jpg" alt="Cleaning 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean11.jpg" alt="Planting 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean12.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean13.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean14.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean15.jpg" alt="Cleaning 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean16.jpg" alt="Planting 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean17.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean18.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean19.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean20.jpg" alt="Cleaning 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean21.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean22.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean23.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean24.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean25.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean26.jpg" alt="Cleaning 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean27.jpg" alt="Planting 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean28.jpg" alt="Planting 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean29.jpg" alt="Cleaning 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/clean30.jpg" alt="Cleaning 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+           
+    </section>
+
+    <section class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-4xl font-extrabold text-blue-600 text-center mb-6 uppercase tracking-widest">News</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="/images/news1.jpg" alt="News 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news2.jpg" alt="News 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news3.jpg" alt="News 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news4.jpg" alt="News 4" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news5.jpg" alt="News 5" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news6.jpg" alt="News 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news7.jpg" alt="News 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news8.jpg" alt="News 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news9.jpg" alt="News 4" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news10.jpg" alt="News 5" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news11.jpg" alt="News 4" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/news12.jpg" alt="News 5" class="gallery-img rounded-lg shadow-md cursor-pointer">
+        </div>
+    </section>
+
+
+    
+
+
+    <section class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-4xl font-extrabold text-red-600 text-center mb-6 uppercase tracking-widest">COVID</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+           
+            <img src="/images/covid1.jpg" alt="COVID 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/covid2.jpg" alt="COVID 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/covid3.jpg" alt="COVID 4" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/covid4.jpg" alt="COVID 5" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/covid5.jpg" alt="COVID 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/covid6.png" alt="COVID 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-4xl font-extrabold text-yellow-400 text-center mb-6 uppercase tracking-widest">LAKE CLEANING</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+           
+            <img src="/images/lake1.jpg" alt="COVID 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/lake2.jpg" alt="COVID 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/lake3.jpg" alt="COVID 4" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/lake4.jpg" alt="COVID 5" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/lake5.jpg" alt="COVID 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-4xl font-extrabold text-pink-400 text-center mb-6 uppercase tracking-widest">YOGA</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+           
+            <img src="/images/yoga1.jpg" alt="COVID 2" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/yoga2.jpg" alt="COVID 3" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/yoga3.jpg" alt="COVID 4" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/yoga4.jpg" alt="COVID 5" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            <img src="/images/yoga5.jpg" alt="COVID 1" class="gallery-img rounded-lg shadow-md cursor-pointer">
+            
+        </div>
+    </section>
+
+
+    <div id="modal" class="modal">
+        <img id="modalImg" src="" alt="">
+    </div>
+
+    <script>
+
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modalImg");
+        const images = document.querySelectorAll(".gallery-img");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                modalImg.src = img.src;
+                modal.classList.add("active");
+            });
+        });
+
+        modal.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+    </script>
+
+</body>
+</html>

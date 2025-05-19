@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .details {
+            text-align: left;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank You for Your Donation!</h1>
+    <p>Your contribution makes a difference.</p>
+    
+    <div class="details">
+        <h2>Donation Details</h2>
+        <p><strong>Name:</strong> <%= donation.name %></p>
+        <p><strong>Email:</strong> <%= donation.email %></p>
+        <p><strong>Amount:</strong> ₹<%= donation.amount %></p>
+        <p><strong>Payment ID:</strong> <%= donation.paymentId %></p>
+        <p><strong>Date:</strong> <%= donation.date.toLocaleDateString() %></p>
+        <p><strong>Receipt:</strong> <%= donation.receipt %></p>
+    </div>
+
+    <button onclick="window.location.href='/download-receipt/<%= donation.orderId %>'">Download Receipt</button>
+    <button onclick="window.location.href='/download-invoice/<%= donation.orderId %>'">Download Invoice</button>
+    <a href="/"><button >Home</button></a>
+</body>
+</html>

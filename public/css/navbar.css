@@ -1,0 +1,78 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Navbar container with flexbox */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: screen;
+    height: 132px;
+    margin: auto;
+
+}
+
+/* Logo on the left */
+.logo-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 125.72px;
+    width: 151.61px;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #ff6600;
+}
+
+/* Right section (social icons + donate button) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+}
+
+.donate-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.donate-btn:hover {
+    background-color: darkgreen;
+}

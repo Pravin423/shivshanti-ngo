@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: white;
+  color: white;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.containerrr{
+  height: 740px;
+  width: screen;
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1500px;
+  height: 132px;
+  background: white;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.donate-btn {
+  background: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+
+  background-size: cover;
+}
+.hero-text {
+  max-width: 50%;
+}
+.hero-text h1 {
+  font-size: 3rem;
+}
+.highlight {
+  color: orange;
+}
+.hero-buttons {
+  margin-top: 20px;
+}
+.hero-buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 50vh;
+  text-align: left;
+  color: white;
+  padding: 100px;
+  padding-top: 300px;
+}
+
+
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: orange;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.video-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  margin-left: 10px;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: transparent; /* Optional: Makes the text hollow */
+}

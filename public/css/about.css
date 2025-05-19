@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+
+}
+
+.container{
+    display: flex;
+    width: screen;
+    margin: auto;
+    padding: 30px;
+}
+.aboutknowus{
+    align-items: center;
+    width: 400px;
+
+}
+    
