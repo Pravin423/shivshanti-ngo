@@ -179,6 +179,22 @@ router.get("/story/:id", (req, res) => {
 
     Together, let’s protect our lakes and preserve them for future generations.
   `
+},
+{
+  id: 8,
+  title: "Yoga for All: Promoting Holistic Wellbeing in Communities",
+  images: ["/images/yoga1.jpg", "/images/yoga2.jpg", "/images/yoga3.jpg"],
+  content: `
+    Shivshanti Pratishthan introduced the "Yoga for All" campaign to foster physical, mental, and spiritual wellness across diverse age groups in Thane.
+
+    Held weekly in community parks, housing societies, and schools, these sessions are led by certified yoga instructors and focus on improving flexibility, reducing stress, and building mindfulness. The program has witnessed enthusiastic participation from children, senior citizens, and working professionals alike.
+
+    With over 500+ attendees across sessions, the initiative emphasizes the benefits of daily movement, breathing exercises, and meditation. Special workshops are also held on International Yoga Day, featuring collaborative events with healthcare professionals and wellness influencers.
+
+    Beyond the mats, this campaign aims to instill discipline, harmony, and balance in everyday life—aligning perfectly with our broader mission of sustainable and healthy living.
+
+    Join us in embracing the power of yoga for a more peaceful body, mind, and society.
+  `
 }
 
 

@@ -8,9 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/public/css/homepage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
 </head>
+
 <style>
   @keyframes slideIn {
     from {
@@ -22,6 +21,7 @@
       transform: translateX(0);
     }
   }
+
   .animate-slide-in {
     animation: slideIn 1s ease-out forwards;
   }
@@ -31,106 +31,101 @@
   <header><%- include('partials/navbar') %></header>
 
   <!-- Hero Section -->
-  <div class="relative bg-cover h-[681px] w-screen mx-auto" style="background-image: url('/images/backgroundcheck2.jpg')">
-    <div class="flex items-start px-10 pt-20">
-      <section class="w-[700px]">
-        <h1 class="text-white text-6xl font-bold leading-tight animate-slide-in">
+  <div class="relative bg-cover h-[600px] w-full mx-auto" style="background-image: url('/images/backgroundcheck2.jpg')">
+    <div class="flex flex-col md:flex-row items-start px-6 md:px-10 pt-20">
+      <section class="w-full md:w-[700px]">
+        <h1 class="text-white text-4xl md:text-6xl font-bold leading-tight animate-slide-in">
           Everyday <br />
           we Take <br />
           A small Step <br />
           To <span class="text-orange-500">Bright Future</span>.
         </h1>
-      
-        <p class="text-white mt-4 text-lg animate-slide-in" style="animation-delay: 0.3s;">
+        <p class="text-white mt-4 text-base md:text-lg animate-slide-in" style="animation-delay: 0.3s;">
           Your Help Matters, No Matter How Big Or Small.
         </p>
       </section>
-
     </div>
-    <div class="pr-10 mt-16 text-center">
-      <img src="/images/Statistics.png" alt="" class="inline-block" />
+    <div class="pr-4 md:pr-10 mt-10 md:mt-[100px] text-center">
+      <img src="/images/Statistics.png" alt="" class="inline-block max-w-full" />
     </div>
   </div>
-  <div class="py-24"></div>
+
+  <div class="py-12 md:py-24"></div>
 
   <!-- About Section -->
-   <center>
-    <div class="w-[1400px] justify-center  mx-auto flex">
-      <div class="w-[700px] px-8">
-        <img src="/images/know us.png" alt="know about us">
-        <h2 class="text-[48px] font-bold mt-4">"Empowering Lives, <br> Uplifting Communities"</h2>
-        <h3 class="text-[48px] font-bold mt-4">
-          <span class="text-orange-500 text-stroke">Clean</span>,
-          <span class="text-gray-400 text-stroke">Educate</span>,
-          <span class="text-green-500 text-stroke">Inspire</span>!
-        </h3>
-        <p class="text-gray-700 mt-4 w-[605px]">
-          Driven by our vision to balance nature and culture, SHIVSHANTI
-          PRATISTHAN is dedicated to transforming the way we interact with our
-          surroundings. From clean-up campaigns to community outreach, every step
-          is a step toward a brighter future.
-        </p>
-        <br><br>
+  <div class="w-full max-w-[1400px] mx-auto flex flex-col lg:flex-row justify-center items-center px-4">
+    <div class="w-full lg:w-[700px] px-4 md:px-8">
+      <img src="/images/know us.png" alt="know about us" class="w-[200px] max-h-[400px]" />
+      <h2 class="text-[32px] md:text-[48px] font-bold mt-4 text-center md:text-left">"Empowering Lives, <br> Uplifting Communities"</h2>
+      <h3 class="text-[32px] md:text-[48px] font-bold mt-4 text-center md:text-left">
+        <span class="text-orange-500 text-stroke">Clean</span>,
+        <span class="text-gray-400 text-stroke">Educate</span>,
+        <span class="text-green-500 text-stroke">Inspire</span>!
+      </h3>
+      <p class="text-gray-700 mt-4 max-w-[605px] text-center md:text-left mx-auto md:mx-0">
+        Driven by our vision to balance nature and culture, SHIVSHANTI
+        PRATISTHAN is dedicated to transforming the way we interact with our
+        surroundings. From clean-up campaigns to community outreach, every step
+        is a step toward a brighter future.
+      </p>
+      <br><br>
+      <div class="text-center md:text-left">
         <a href="/"><button class="bg-green-500 text-white border-2 border-green-700 px-6 py-2 mt-4 rounded">Learn more</button></a>
       </div>
-      <div class="w-[700px] px-20">
-        <img src="/images/real work real change.png" alt="Tree plantation event" class="rounded-lg shadow-lg" />
-       
-      </div>
     </div>
-  
-   </center>
-  
+    <div class="w-full lg:w-[700px] px-4 md:px-20 mt-10 lg:mt-0">
+      <img src="/images/real work real change.png" alt="Tree plantation event" class="rounded-lg shadow-lg w-full" />
+    </div>
+  </div>
+
   <!-- Snake Section -->
-  <div class="py-24"></div>
-  <center>
-    <div class="w-[100] ml-[200px] text-center">
-      <img src="/images/snakenew1.png" alt="">
-    </div>
-  </center>
-  
+  <div class="py-12 md:py-24"></div>
+  <div class="text-center px-4">
+    <img src="/images/snakenew1.png" alt="" class="inline-block max-w-full" />
+  </div>
 
   <!-- Projects Section -->
-  <div class="py-24"></div>
-  <div class="w-[1301px] mx-auto text-center">
-    <img src="/images/project_have_done.png" alt="project done">
-    <br><br><br>
-    <h1 class="text-4xl font-bold text-[#1a1d29]">Helping hands, hopeful hearts – working for a better world.</h1>
-    <br><br><br>
-    <div class="flex justify-evenly text-center">
-      <div class=" project1 bg-gray-800 w-[410px] h-[421px] rounded-[12px] shadow-lg"
-        style="background-image: url('/images/Project11.png')">
-        <h2 class="text-3xl font-bold text-white ml-0 mt-[100px]">Go Green Revolution</h2>
-        <br>
-        <p class="text-white mt-[50px] w-[310px] ml-[45px]"> Over 3500 Plants Planted: As part of the "Go Green
-          Revolution," more than 3500 trees have been planted across various regions.</p>
-        <button class="bg-white  text-black border-2 border-black-700 px-6 py-2 mt-4 rounded">See more</button>
-      </div>
-      <div class=" project2 bg-gray-800 w-[410px] h-[421px] rounded-[12px] shadow-lg"
-        style="background-image: url('/images/Project22.png')">
-        <h2 class="text-3xl font-bold text-white ml-0 mt-[100px]">Lakes Cleaned</h2>
-        <br>
-        <p class="text-white mt-[50px] w-[310px] ml-[45px]"> Lakes cleaned in various locations, including pre- and
-          post-Chhath Pooja, to ensure the community's environmental sustainability.</p>
-        <button class="bg-white text-black border-2 border-black-700 px-6 py-2 mt-4 rounded">See more</button>
-      </div>
-      <div class=" project3 bg-gray-800 w-[410px] h-[421px] rounded-[12px] shadow-lg"
-        style="background-image: url('/images/Project33.png')">
-        <h2 class="text-3xl font-bold text-white ml-0 mt-[50px]">Personal Vehicle Transformed into an Ambulance</h2>
-        <br>
-        <p class="text-white mt-[20px] w-[310px] ml-[45px]"> During the COVID-19 crisis, Mr. Vinay Kumar Singh converted
-          his own car into an ambulance, providing free emergency transportation to over 55 patients in need.</p>
-        <button class="bg-white text-black border-2 border-black-700 px-6 py-2 mt-4 rounded">See more</button>
+  <div class="py-12 md:py-24 px-4">
+    <div class="w-full max-w-[1301px] mx-auto text-center">
+      <img src="/images/project_have_done.png" alt="project done" class="w-[300px] max-h-[400px]" />
+      <br><br><br>
+      <h1 class="text-2xl md:text-4xl font-bold text-[#1a1d29]">Helping hands, hopeful hearts – working for a better world.</h1>
+      <br><br><br>
+      <div class="flex flex-col lg:flex-row justify-evenly items-center gap-8">
+        <div class="project1 bg-gray-800 w-full max-w-[410px] h-[421px] rounded-[12px] shadow-lg bg-cover bg-center"
+          style="background-image: url('/images/Project11.png')">
+          <div class="px-4 pt-[100px]">
+            <h2 class="text-2xl md:text-3xl font-bold text-white">Go Green Revolution</h2>
+            <p class="text-white mt-6 text-sm md:text-base"> Over 3500 Plants Planted: As part of the "Go Green
+              Revolution," more than 3500 trees have been planted across various regions.</p>
+            <a href="/news"><button class="bg-white text-black border-2 border-black-700 px-6 py-2 mt-4 rounded">See more</button></a>
+          </div>
+        </div>
+
+        <div class="project2 bg-gray-800 w-full max-w-[410px] h-[421px] rounded-[12px] shadow-lg bg-cover bg-center"
+          style="background-image: url('/images/Project22.png')">
+          <div class="px-4 pt-[100px]">
+            <h2 class="text-2xl md:text-3xl font-bold text-white">Lakes Cleaned</h2>
+            <p class="text-white mt-6 text-sm md:text-base"> Lakes cleaned in various locations, including pre- and
+              post-Chhath Pooja, to ensure the community's environmental sustainability.</p>
+            <a href="/news"><button class="bg-white text-black border-2 border-black-700 px-6 py-2 mt-4 rounded">See more</button></a>
+          </div>
+        </div>
+
+        <div class="project3 bg-gray-800 w-full max-w-[410px] h-[421px] rounded-[12px] shadow-lg bg-cover bg-center"
+          style="background-image: url('/images/Project33.png')">
+          <div class="px-4 pt-[50px]">
+            <h2 class="text-2xl md:text-3xl font-bold text-white">Personal Vehicle Transformed into an Ambulance</h2>
+            <p class="text-white mt-4 text-sm md:text-base"> During the COVID-19 crisis, Mr. Vinay Kumar Singh converted
+              his own car into an ambulance, providing free emergency transportation to over 55 patients in need.</p>
+            <a href="/news"><button class="bg-white text-black border-2 border-black-700 px-6 py-2 mt-4 rounded">See more</button></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <%- include('partials/footer') %>
 
+  <%- include('partials/footer') %>
 </body>
 
 </html>
