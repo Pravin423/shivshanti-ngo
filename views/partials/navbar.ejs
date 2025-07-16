@@ -1,28 +1,52 @@
 <head>
-  <link rel="stylesheet" href="/css/navbar.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<nav class="navbar ">
-  <div class="navbar-container">
-    <div class="logo-container">
-      <img class="logo" src="/images/logo.png" alt="NGO Logo" />
+
+<nav class="bg-white w-full shadow-md py-3">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
+
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <img src="/images/logo.png" alt="NGO Logo" class="w-32 h-32 object-contain" />
     </div>
 
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About us</a></li>
-      <li><a href="/wedo">What We Do</a></li>   
-      <li><a href="/news">News</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/gallery">Gallery</a></li>
-    </ul>
+    <!-- Mobile Menu Button -->
+    <div class="lg:hidden">
+      <button id="menuToggle" class="text-3xl text-gray-700 focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
 
-    <div class="nav-right">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fas fa-envelope"></i></a>
-      <a href="/donate" class="donate-btn">Donate</a>
+    <!-- Right Section -->
+    <div id="navMenu" class="hidden lg:flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-6 mt-6 lg:mt-0 text-center w-full lg:w-auto">
+     
 
+      <!-- Navigation Links -->
+      <ul class="flex flex-col lg:flex-row justify-center items-center space-y-4 lg:space-y-0 lg:space-x-6 text-gray-700 font-medium">
+        <li><a href="/" class="<%= currentPath === '/' ? 'border-b-2 border-green-600 font-semibold' : 'hover:text-green-600' %>">Home</a></li>
+        <li><a href="/about" class="<%= currentPath === '/about' ? 'border-b-2 border-green-600 font-semibold' : 'hover:text-green-600' %>">About us</a></li>
+        <li><a href="/wedo" class="<%= currentPath === '/wedo' ? 'border-b-2 border-green-600 font-semibold' : 'hover:text-green-600' %>">What We Do</a></li>
+        <li><a href="/news" class="<%= currentPath === '/news' ? 'border-b-2 border-green-600 font-semibold' : 'hover:text-green-600' %>">News</a></li>
+        <li><a href="/contact" class="<%= currentPath === '/contact' ? 'border-b-2 border-green-600 font-semibold' : 'hover:text-green-600' %>">Contact</a></li>
+        <li><a href="/gallery" class="<%= currentPath === '/gallery' ? 'border-b-2 border-green-600 font-semibold' : 'hover:text-green-600' %>">Gallery</a></li>
+      </ul>
+
+      <!-- Donate Button -->
+      <a href="/donate" class="mt-2 lg:mt-0 px-5 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition">
+        Donate
+      </a>
     </div>
   </div>
 </nav>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  const toggleBtn = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+  });
+</script>

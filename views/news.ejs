@@ -1,27 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEWS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/public/css/homepage.css" />
-    <link rel="stylesheet" href="/public/css/about.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEWS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/public/css/homepage.css" />
+  <link rel="stylesheet" href="/public/css/about.css" />
 </head>
-<body>
-    <header>
-        <%- include('partials/navbar') %>
-    </header>
-    <h1>NEWS PAGE</h1>
-    <section class="flex justify-center items-center ml-[270px] ">
-        <div class="container">
-            <div class="row">
-                <br>    
-                <%- include('partials/update') %>
-    
-            </div>
+
+<body class="bg-white text-gray-800">
+  <header>
+    <%- include('partials/navbar') %>
+  </header>
+
+  <!-- 🔼 Hero Section -->
+  <section class="flex flex-col lg:flex-row justify-center items-center mt-[30px] mx-4 lg:ml-[60px]">
+    <div class="container max-w-screen-xl">
+      <img src="/images/topnews.png" alt="" class="w-[200px] max-h-[400px] object-cover rounded-xl" />
+
+      <div class="flex flex-col lg:flex-row mx-0 lg:mx-[100px] mt-[30px] gap-6">
+        <div class="part1 lg:w-[60%]">
+          <h1 class="text-[30px] sm:text-[40px] lg:text-[50px] font-bold leading-[120%]">
+            <span class="text-[#F95406]">Together</span>, we can turn our
+            collective efforts into a cleaner and
+            <span class="text-[#02C720]">greener world</span>.
+          </h1>
+          <div class="w-full flex">
+            <button type="button"
+              class="mt-5 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+              Read More
+            </button>
+          </div>
         </div>
+        <div class="part2 flex justify-center items-center ">
+          <img src="/images/newsimg1.png" alt="" class="w-full max-w-[600px] object-contain" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔼 News Cards Section -->
+  <section class="mx-3 mt-[100px]">
+    <h1 class="text-center text-3xl sm:text-4xl font-bold">Read our Recent News</h1>
+    <section class="mx-auto px-4 sm:px-6 lg:px-[100px] mt-[50px]">
+      <div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <!-- Cards go here -->
+      </div>
     </section>
-    
+  </section>
+  <br><br>
+  <section class="mx-auto px-[100px] mt-[100px]">
+    <div class="flex justify-start m-4 mt-8">
+      <img class="w-50 h-auto" src="/images/our events.png" alt="Know Us" />
+    </div>
+    <div class="flex space-x-4 p-6 bg-gray-100 rounded justify-center">
+      <!-- First Card -->
+      <div
+        class="flex items-center justify-between bg-green-200 rounded-lg p-6 w-80 shadow-lg transform transition duration-300 hover:scale-105 hover:bg-green-300 hover:shadow-xl">
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-gray-900">23</span>
+          <span class="text-sm text-gray-600">JAN</span>
+          <span class="text-xs text-gray-500 uppercase font-semibold mt-1">Next Events</span>
+          <div class="border-t-2 border-gray-600 w-12 my-1"></div>
+          <span class="text-lg font-semibold text-gray-900">Green Thane Walk</span>
+        </div>
+        <div
+          class="h-10 w-10 text-black bg-white rounded-full flex items-center justify-center shadow-md transform transition duration-300 hover:scale-110 hover:bg-gray-800 hover:text-white">
+          ➝
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div
+        class="flex items-center justify-between bg-green-200 rounded-lg p-6 w-80 shadow-lg transform transition duration-300 hover:scale-105 hover:bg-green-300 hover:shadow-xl">
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-gray-900">25</span>
+          <span class="text-sm text-gray-600">JAN</span>
+          <span class="text-xs text-gray-500 uppercase font-semibold mt-1">Next Events</span>
+          <div class="border-t-2 border-gray-600 w-12 my-1"></div>
+          <span class="text-lg font-semibold text-gray-900">Weekly Cleaning Program</span>
+        </div>
+        <div
+          class="h-10 w-10 text-black bg-white rounded-full flex items-center justify-center shadow-md transform transition duration-300 hover:scale-110 hover:bg-gray-800 hover:text-white">
+          ➝
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </section>
+  <br>
+  <section>
+    <%- include('partials/footer') %>
+  </section>
+
+  <!-- 🔽 Card Generation Script -->
+  <script>
+    const newsCards = [
+      {
+        id: 1,
+        title: "Support and Relief During the COVID-19 Pandemic",
+        description:
+          "Shivshanti Pratishthan distributed food grains, sanitizers, masks, and daily necessities to local residents and essential workers in Thane during the COVID-19 pandemic. This initiative supported both the public and frontline workers.",
+        image: "/images/food.png"
+      },
+      {
+        id: 2,
+        title: "Personal Vehicle Transformed into an Ambulance",
+        description:
+          "Shivshanti Pratishthan provided free ambulance services to COVID-19 patients, helping over 55 patients reach hospitals for treatment. This initiative was widely appreciated by media outlets like Hindustan Times and ABP Majha.",
+        image: "/images/covid1.jpg"
+      },
+      {
+        id: 3,
+        title: "Sanitizer Spraying Initiative:",
+        description:
+          "To prevent the spread of COVID-19, Shivshanti Pratishthan organized sanitizer spraying at public places and residential areas in Thane. Social workers and members of BJP also contributed to this effort.",
+        image: "/images/sanitizer.png"
+      },
+      {
+        id: 4,
+        title: "Our goal is to make water available for everyone",
+        description:
+          "We aim to solve water scarcity in underserved communities by installing water filters, constructing tanks, and promoting sustainable water management practices.",
+        image: "/images/planting11.jpg"
+      },
+      {
+        id: 5,
+        title: "Swachhta Abhiyan: Weekly Cleanliness Drives in Thane",
+        description:
+          "Promoting hygiene and social responsibility by organizing regular cleanup campaigns and advocating for a cleaner city.",
+        image: "/images/img8.jpg"
+      },
+      {
+        id: 6,
+        title: "Greener Tomorrow: 1,800+ Trees Planted",
+        description:
+          "Leading the ‘Go Green Revolution’ by planting trees and fostering environmental sustainability for a healthier planet.",
+        image: "/images/gogreennew.png"
+      },
+      {
+        id: 7,
+        title: "Lake Revival Mission: Restoring Thane’s Water Bodies",
+        description:
+          "Leading the ‘Go Green Revolution’ by planting trees and fostering environmental sustainability for a healthier planet.",
+        image: "/images/img25.jpg"
+      },
+      
+      
+    ];
+
+    const container = document.getElementById("cardContainer");
+
+    newsCards.forEach(card => {
+      const cardHTML = `
+        <div onclick="redirectToStory(${card.id})"
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl cursor-pointer transition transform hover:scale-105">
+          <img src="${card.image}" alt="${card.title}" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h2 class="text-md font-bold text-gray-800">${card.title}</h2>
+            <p class="text-gray-600 text-sm mt-2">${card.description}</p>
+          </div>
+        </div>
+      `;
+      container.innerHTML += cardHTML;
+    });
+
+    function redirectToStory(id) {
+      window.location.href = `/story/${id}`;
+    }
+  </script>
+
 </body>
+
 </html>
