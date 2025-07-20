@@ -83,10 +83,12 @@ router.get('/success/:orderId', async (req, res) => {
   res.render('success', { donation });
 });
 
+
+
 router.get('/download-receipt/:orderId', async (req, res) => {
   const donation = await Donation.findOne({ orderId: req.params.orderId });
 
-  const doc = new PDFDocument();
+  const doc = new PDFDocument({ margin: 50 });
   const filename = `receipt_${donation.orderId}.pdf`;
 
   res.setHeader('Content-disposition', `attachment; filename="${filename}"`);
@@ -94,15 +96,48 @@ router.get('/download-receipt/:orderId', async (req, res) => {
 
   doc.pipe(res);
 
-  // Receipt content
-  doc.fontSize(20).text('Donation Receipt', { align: 'center' });
-  doc.moveDown();
-  doc.fontSize(14).text(`Name: ${donation.name}`);
-  doc.text(`Email: ${donation.email}`);
-  doc.text(`Amount: ₹${donation.amount}`);
-  doc.text(`Payment ID: ${donation.paymentId}`);
-  doc.text(`Date: ${donation.date.toLocaleDateString()}`);
-  doc.text(`Receipt: ${donation.receipt}`);
+  // ======= HEADER: Logo + Name Only =======
+  doc
+    .image('./public/images/logo.png', 50, 45, { width: 50 }) // Adjust path as needed
+    .fontSize(20)
+    .text('Shivshanti Pratisthan', 110, 57);
+
+  doc.moveDown(2);
+
+  // ======= TITLE =======
+  doc
+    .fillColor('#02C720')
+    .fontSize(18)
+    .text('DONATION RECEIPT', { align: 'center' })
+    .fillColor('black')
+    .moveDown();
+
+  // ======= RECEIPT DETAILS =======
+  doc
+    .fontSize(12)
+    .text(`Receipt #: ${donation.receipt}`, { align: 'right' })
+    .text(`Date: ${donation.date.toLocaleDateString()}`, { align: 'right' })
+    .moveDown();
+
+  doc
+    .fontSize(12)
+    .text(`Received From:`, { underline: true })
+    .text(`Name: ${donation.name}`)
+    .text(`Email: ${donation.email}`)
+    .moveDown();
+
+  doc
+    .fontSize(12)
+    .text(`Amount Received: ₹${donation.amount}`)
+    .text(`Payment ID: ${donation.paymentId || 'N/A'}`)
+    .text(`Order ID: ${donation.orderId}`)
+    .moveDown();
+
+  doc
+    .fontSize(12)
+    .fillColor('gray')
+    .text('We sincerely thank you for your contribution.', { align: 'center' })
+    .text('This receipt is computer generated and does not require a signature.', { align: 'center' });
 
   doc.end();
 });
@@ -110,7 +145,7 @@ router.get('/download-receipt/:orderId', async (req, res) => {
 router.get('/download-invoice/:orderId', async (req, res) => {
   const donation = await Donation.findOne({ orderId: req.params.orderId });
 
-  const doc = new PDFDocument();
+  const doc = new PDFDocument({ margin: 50 });
   const filename = `invoice_${donation.orderId}.pdf`;
 
   res.setHeader('Content-disposition', `attachment; filename="${filename}"`);
@@ -118,18 +153,49 @@ router.get('/download-invoice/:orderId', async (req, res) => {
 
   doc.pipe(res);
 
-  // Invoice content
-  doc.fontSize(20).text('Donation Invoice', { align: 'center' });
-  doc.moveDown();
-  doc.fontSize(14).text('From: Your Organization Name');
-  doc.text('To:');
-  doc.text(`Name: ${donation.name}`);
-  doc.text(`Email: ${donation.email}`);
-  doc.moveDown();
-  doc.text(`Description: Donation`);
-  doc.text(`Amount: ₹${donation.amount}`);
-  doc.text(`Date: ${donation.date.toLocaleDateString()}`);
-  doc.text(`Order ID: ${donation.orderId}`);
+  // ======= HEADER: Logo + Name Only =======
+  doc
+    .image('./public/images/logo.png', 50, 45, { width: 50 }) // Adjust path as needed
+    .fontSize(20)
+    .text('Shivshanti Pratisthan', 110, 57);
+
+  doc.moveDown(2);
+
+  // ======= TITLE =======
+  doc
+    .fillColor('#02C720')
+    .fontSize(18)
+    .text('DONATION INVOICE', { align: 'center' })
+    .fillColor('black')
+    .moveDown();
+
+  // ======= INVOICE DETAILS =======
+  doc
+    .fontSize(12)
+    .text(`Invoice Date: ${donation.date.toLocaleDateString()}`, { align: 'right' })
+    .text(`Invoice #: ${donation.receipt}`, { align: 'right' })
+    .moveDown();
+
+  doc
+    .fontSize(12)
+    .text(`Billed To:`, { underline: true })
+    .text(`Name: ${donation.name}`)
+    .text(`Email: ${donation.email}`)
+    .moveDown();
+
+  doc
+    .fontSize(12)
+    .text(`Description: Donation`)
+    .text(`Amount Donated: ₹${donation.amount}`)
+    .text(`Order ID: ${donation.orderId}`)
+    .text(`Payment ID: ${donation.paymentId || 'N/A'}`)
+    .moveDown();
+
+  doc
+    .fontSize(12)
+    .fillColor('gray')
+    .text('Thank you for your generous contribution.', { align: 'center' })
+    .text('This invoice is computer generated and does not require a signature.', { align: 'center' });
 
   doc.end();
 });
