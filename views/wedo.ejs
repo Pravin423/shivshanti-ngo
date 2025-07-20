@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,294 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/public/css/homepage.css" />
     <link rel="stylesheet" href="/public/css/about.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body>
     <header>
         <%- include('partials/navbar') %>
     </header>
-    <h1>    WHAT WE DO PAGE</h1>
-    <section class="flex justify-center items-center ml-[270px] ">
+    <section>
         <div class="container">
-            <div class="row">
-                <br>    
-                <%- include('partials/update') %>
-    
+            <img src="/images/whatwedosymbol.png" alt="know about us"
+                class="w-[200px] max-h-[400px] mt-[20px] ml-[20px]" />
+        </div>
+        <br>
+        <div class="relative bg-cover h-[400] w-full mx-auto" style="background-image: url('/images/whatwedoback.png')">
+            <div class="flex flex-col md:flex-row items-start px-6 md:px-10 pt-20 ml-[20px]">
+                <section class="w-full md:w-[700px]">
+                    <h1 class="text-white text-5xl md:text-6xl font-bold leading-tight animate-slide-in">
+                        From <br />
+                        <span class="text-orange-500">
+                            Awarness
+                        </span>
+                        <br />
+                        To Action— <br />
+                        We Build A <br />
+                        <span class="text-[#02C720]">
+                            Greener
+                        </span>
+                        <br />
+                        Future .
+                    </h1>
+                    <br><br><br><br>
+
+                </section>
             </div>
+
+        </div>
+
+    </section>
+    <br><br><br>
+  <section class="relative py-16 overflow-hidden">
+  <!-- Animated Green-Orange Background -->
+  <div class="absolute inset-0 z-0 animate-gradient bg-[length:300%_300%] bg-gradient-to-r from-[#02C720] via-[#F35602] to-[#02C720]"></div>
+
+  <!-- Content Card -->
+  <div class="relative z-10 bg-white bg-opacity-90 rounded-2xl shadow-2xl max-w-4xl mx-auto px-6 md:px-12 py-12 text-center backdrop-blur-md">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight font-serif">
+      Empowering Communities, Transforming Lives
+    </h1>
+    <p class="text-gray-700 text-lg leading-relaxed font-medium">
+      To drive social change by promoting education, environmental sustainability, and community welfare.
+      Through initiatives like free education, cleanliness drives, and healthcare support,
+      we strive to create a cleaner, greener, and more empowered society.
+    </p>
+  </div>
+
+  <!-- Gradient Animation Style -->
+  <style>
+    @keyframes gradientShift {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .animate-gradient {
+      animation: gradientShift 8s ease-in-out infinite;
+      background-size: 300% 300%;
+    }
+  </style>
+</section>
+
+
+
+    <br>
+    <br>
+    <section class="bg-gray-300 w-full py-12 font-[Poppins]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center h-full">
+
+            <!-- Left Text Column -->
+            <div class="w-full md:w-1/2 px-6">
+                <h2 class="text-xl md:text-2xl font-extrabold uppercase text-gray-900 tracking-wide leading-relaxed">
+                    Driven by our vision to balance nature and culture, <span class="text-black">Shivshanti
+                        Pratishthan</span> is dedicated to transforming the way we interact with our surroundings. From
+                    clean-up campaigns to community outreach, every step is a step toward a brighter future.
+                </h2>
+            </div>
+
+            <!-- Right Image Column -->
+            <div class="w-full md:w-1/2 mt-6 md:mt-0">
+                <img src="/images/whawedoimg2.png" alt="Cleanup campaign"
+                    class="w-full h-full object-cover rounded-md shadow-lg">
+            </div>
+
         </div>
     </section>
-    
+
+    <br>
+    <section>
+        <div class="container">
+            <img src="/images/areasofwork.png" alt="know about us"
+                class="w-[300px] max-h-[500px] mt-[20px] ml-[20px]" />
+        </div>
+        <br>
+       <section class="bg-gray-100 py-16 relative font-[Poppins]">
+  <!-- Left Button -->
+  <div class="swiper-button-prev !text-gray-700 absolute left-4 top-1/2 -translate-y-1/2 z-10"></div>
+
+  <!-- Right Button -->
+  <div class="swiper-button-next !text-gray-700 absolute right-4 top-1/2 -translate-y-1/2 z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Card Template -->
+        <div class="swiper-slide">
+          <div class="bg-white w-full h-[300px] flex flex-col rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-transform duration-300 transform hover:scale-105 text-center">
+            <img src="/images/clean7.jpg" alt="Clean Earth Initiative" class="w-full h-48 object-cover" />
+            <div class="flex flex-col justify-between flex-grow py-4 px-4">
+              <h3 class="text-xl font-semibold text-[#1E1E2F] drop-shadow-sm truncate">Clean Earth Initiative</h3>
+              <p class="text-sm text-gray-600 mt-2 overflow-hidden text-ellipsis line-clamp-2">Empowering communities for a cleaner tomorrow</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="bg-white w-full h-[300px] flex flex-col rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-transform duration-300 transform hover:scale-105 text-center">
+            <img src="/images/planting5.jpg" alt="Greener Tomorrow Campaign" class="w-full h-48 object-cover" />
+            <div class="flex flex-col justify-between flex-grow py-4 px-4">
+              <h3 class="text-xl font-semibold text-[#1E1E2F] drop-shadow-sm truncate">Greener Tomorrow Campaign</h3>
+              <p class="text-sm text-gray-600 mt-2 overflow-hidden text-ellipsis line-clamp-2">Sowing seeds of sustainability</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="bg-white w-full h-[300px] flex flex-col rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-transform duration-300 transform hover:scale-105 text-center">
+            <img src="/images/planting21.jpg" alt="Community Green Drives" class="w-full h-48 object-cover" />
+            <div class="flex flex-col justify-between flex-grow py-4 px-4">
+              <h3 class="text-xl font-semibold text-[#1E1E2F] drop-shadow-sm truncate">Community Green Drives</h3>
+              <p class="text-sm text-gray-600 mt-2 overflow-hidden text-ellipsis line-clamp-2">Building eco-aware neighborhoods</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="bg-white w-full h-[300px] flex flex-col rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-transform duration-300 transform hover:scale-105 text-center">
+            <img src="/images/yoga2.jpg" alt="Mind & Body Wellness" class="w-full h-48 object-cover" />
+            <div class="flex flex-col justify-between flex-grow py-4 px-4">
+              <h3 class="text-xl font-semibold text-[#1E1E2F] drop-shadow-sm truncate">Mind & Body Wellness</h3>
+              <p class="text-sm text-gray-600 mt-2 overflow-hidden text-ellipsis line-clamp-2">Promoting inner peace through yoga</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="bg-white w-full h-[300px] flex flex-col rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-transform duration-300 transform hover:scale-105 text-center">
+            <img src="/images/planting11.jpg" alt="Roots of Hope" class="w-full h-48 object-cover" />
+            <div class="flex flex-col justify-between flex-grow py-4 px-4">
+              <h3 class="text-xl font-semibold text-[#1E1E2F] drop-shadow-sm truncate">Roots of Hope</h3>
+              <p class="text-sm text-gray-600 mt-2 overflow-hidden text-ellipsis line-clamp-2">Planting dreams for future generations</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="bg-white w-full h-[300px] flex flex-col rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-transform duration-300 transform hover:scale-105 text-center">
+            <img src="/images/img25.jpg" alt="Together for Change" class="w-full h-48 object-cover" />
+            <div class="flex flex-col justify-between flex-grow py-4 px-4">
+              <h3 class="text-xl font-semibold text-[#1E1E2F] drop-shadow-sm truncate">Together for Change</h3>
+              <p class="text-sm text-gray-600 mt-2 overflow-hidden text-ellipsis line-clamp-2">United actions for impactful change</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                    1280: {
+                        slidesPerView: 4,
+                    },
+                },
+            });
+        </script>
+
+
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+      <!-- Our Domains -->
+      <div
+        class="bg-white shadow-xl rounded-2xl p-8 transform transition duration-700 ease-in-out hover:-translate-y-1 hover:shadow-2xl animate-fade-in-up"
+      >
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center animate-fade-in-up">Our Domains</h2>
+        <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg">
+          <li class="transition duration-300 hover:text-green-600 animate-fade-in-up">Creating Urban Forests</li>
+          <li class="transition duration-300 hover:text-green-600 animate-fade-in-up">Developing Nurseries</li>
+          <li class="transition duration-300 hover:text-green-600 animate-fade-in-up">Composting</li>
+          <li class="transition duration-300 hover:text-green-600 animate-fade-in-up">Waste Management</li>
+          <li class="transition duration-300 hover:text-green-600 animate-fade-in-up">Water Harvesting</li>
+          <li class="transition duration-300 hover:text-green-600 animate-fade-in-up">Skills Training, Education & Awareness</li>
+        </ul>
+      </div>
+     
+
+      <!-- Our Strengths -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center animate-fade-in-up">Our Strengths</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+
+          <!-- Strength Cards -->
+          <div class="bg-white rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 hover:shadow-xl transition-all duration-500 animate-fade-in-up">
+            <img src="/icons/skill.svg" alt="Skill" class="mx-auto w-12 h-12 mb-4">
+            <p class="text-lg font-semibold text-gray-800">Skill Enhancement<br><span class="text-sm text-gray-600">Workshops & Internships</span></p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 hover:shadow-xl transition-all duration-500 animate-fade-in-up">
+            <img src="/icons/volunteer.svg" alt="Volunteer" class="mx-auto w-12 h-12 mb-4">
+            <p class="text-lg font-semibold text-gray-800">Large Volunteer Base</p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 hover:shadow-xl transition-all duration-500 animate-fade-in-up">
+            <img src="/icons/field.svg" alt="Field Workers" class="mx-auto w-12 h-12 mb-4">
+            <p class="text-lg font-semibold text-gray-800">Dedicated Field Workers</p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 hover:shadow-xl transition-all duration-500 animate-fade-in-up">
+            <img src="/icons/presence.svg" alt="Pan India" class="mx-auto w-12 h-12 mb-4">
+            <p class="text-lg font-semibold text-gray-800">PAN India Presence</p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 hover:shadow-xl transition-all duration-500 animate-fade-in-up">
+            <img src="/icons/community.svg" alt="Community" class="mx-auto w-12 h-12 mb-4">
+            <p class="text-lg font-semibold text-gray-800">Community Engagement</p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 hover:shadow-xl transition-all duration-500 animate-fade-in-up">
+            <img src="/icons/experience.svg" alt="Experience" class="mx-auto w-12 h-12 mb-4">
+            <p class="text-lg font-semibold text-gray-800">45 Years of Experience</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<br>
+  <br>
+  <%- include('partials/footer') %>
+
 </body>
+
 </html>
