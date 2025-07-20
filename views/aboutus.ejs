@@ -15,24 +15,24 @@
   <header><%- include('partials/navbar') %></header>
 
   <!-- About Us Section -->
-  <section class="container mx-auto px-5">
+  <section class="container mx-auto px-4 md:px-5">
     <!-- About Us Image -->
     <div class="flex justify-start m-4 mt-8">
-      <img class="w-50 h-auto" src="/images/know us.png" alt="Know Us" />
+      <img class="w-[180px] md:w-[280px] h-auto" src="/images/know us.png" alt="Know Us" />
     </div>
-  
+
     <!-- About Us Content -->
-    <div class="mt-12 bg-cover bg-center rounded-lg py-12 px-6 lg:px-20"
+    <div class="mt-12 bg-cover bg-center rounded-lg py-12 px-4 md:px-6 lg:px-20"
       style="background-image: url('/images/aboutusbackground.png')">
-      
-      <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+
+      <div class="flex flex-col xl:flex-row items-center xl:items-start gap-12">
         <!-- Left Content -->
         <div class="flex-1">
           <h2 class="text-xl font-semibold text-white">OUR JOURNEY</h2>
           <h1 class="text-5xl font-bold text-[#F95406] mt-3">
             Shivshanti <span class="text-[#02C720]">Pratisthan</span>
           </h1>
-  
+
           <p class="text-gray-300 font-medium mt-5 max-w-lg">
             Founded by <strong>Mr. Vinay Kumar Singh</strong>, Shivshanti
             Pratisthan began with a vision to uplift society through selfless
@@ -47,7 +47,7 @@
             Shivshanti Pratisthan continues to inspire and empower, building a
             healthier, greener, and more compassionate society.
           </p>
-  
+
           <!-- Achievements -->
           <div class="flex flex-wrap gap-8 mt-8">
             <div>
@@ -66,11 +66,11 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Right Content (Founder Image) -->
         <div class="flex flex-col items-center">
-          <img class="w-72 h-auto rounded-lg shadow-lg" src="/images/face.png" alt="Mr. Vinay Kumar Singh" />
-          <div class="flex flex-col items-center border w-[300px] mt-4 rounded-[100px] p-4">
+          <img class="w-60 md:w-72 h-auto rounded-lg shadow-lg" src="/images/face.png" alt="Mr. Vinay Kumar Singh" />
+          <div class="flex flex-col items-center border w-[260px] md:w-[300px] mt-4 rounded-[100px] p-4">
             <h2 class="text-xl font-semibold text-gray-400">Director</h2>
             <h2 class="text-2xl font-semibold text-center mt-1">
               Mr. Vinay Kumar Singh
@@ -80,14 +80,13 @@
       </div>
     </div>
   </section>
-  
 
-  <section class="mx-auto px-[100px] mt-[100px]">
-    <div class="vision_mission p-3 justify-evenly flex mt-10">
-      <div class="container w-[500px] h-auto">
+  <!-- Mission & Vision Section -->
+  <section class="mx-auto px-4 md:px-[60px] mt-[100px]">
+    <div class="vision_mission flex flex-col md:flex-row gap-10 justify-evenly mt-10">
+      <div class="container w-full md:w-[500px] h-auto">
         <h1 class="text-black font-bold text-xl">OUR MISSION</h1>
         <br />
-
         <h1 class="text-4xl font-bold text-black">
           Empowering Communities, Transforming Lives
         </h1>
@@ -99,15 +98,13 @@
           create a cleaner, greener, and more empowered society.
         </p>
       </div>
-      <div class="container w-[500px] h-auto">
+      <div class="container w-full md:w-[500px] h-auto">
         <h1 class="text-black font-bold text-xl">OUR VISION</h1>
         <br />
-
         <h1 class="text-4xl font-bold text-black">
           Vision of the Organization:
         </h1>
-        <br />
-        <br />
+        <br /><br />
         <p class="text-gray-600 font-normal text-lg">
           To create a cleaner, healthier, and more sustainable society by
           engaging communities in social welfare activities, environmental
@@ -119,45 +116,44 @@
       </div>
     </div>
   </section>
-  <section class="mx-auto px-[100px] mt-[100px]">
+
+  <!-- Volunteer Section -->
+  <section class="mx-auto px-4 md:px-[80px] mt-[100px]">
     <div
-      class="container flex flex-col justify-center items-center text-center w-full h-[350px] rounded-lg bg-cover bg-center"
+      class="container flex flex-col justify-center items-center text-center w-full h-auto md:h-[350px] rounded-lg bg-cover bg-center"
       style="background-image: url('images/volunteerbg.png')">
-      <h1 class="text-4xl text-white font-bold max-w-[700px]">
+      <h1 class="text-3xl md:text-4xl text-white font-bold max-w-[700px]">
         You can contribute to make the environment greener!
       </h1>
-      <div class="mt-4 flex gap-4">
-
-        <a href="/donate" class="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600">
+      <div class="mt-4 flex flex-col md:flex-row gap-4">
+        <a href="/donate" class="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 text-center">
           Join as a volunteer
         </a>
-        <a href="/donate" class="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600">
+        <a href="/donate" class="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 text-center">
           Donate
         </a>
       </div>
     </div>
   </section>
-  <br />
-  <br />
 
-  <section class="mx-auto px-[100px] mt-[100px]">
+  <!-- Stories Section -->
+  <section class="mx-auto px-4 md:px-[100px] mt-[100px]">
     <div class="flex justify-start m-4 mt-8">
-      <img class="w-50 h-auto" src="/images/some stories.png" alt="Know Us" />
+      <img class="w-[180px] md:w-[280px] h-auto" src="/images/some stories.png" alt="Know Us" />
     </div>
 
-
-    <div class="container   items-center mt-[100px] flex w-auto h-[590px] justify-between">
-      <div class="part1 ">
-        <h1 class="text-4xl font-bold text-black text-start w-[383px]">
+    <div class="container flex flex-col lg:flex-row items-center gap-12 mt-[60px] w-full h-auto">
+      <div class="part1 max-w-full lg:max-w-[500px] text-center lg:text-left">
+        <h1 class="text-3xl md:text-4xl font-bold text-black">
           Through My Collection Of Stories And Photos Gathered Here, I Hope To
           Preserve The Testimonies And Artistic Creations Of These Phenomenal
           Individuals.
         </h1>
       </div>
-      <div class="space-y-6 p-6 rounded-lg bg-gray-200">
-        <!-- First Card -->
+      <div class="space-y-6 p-6 rounded-lg bg-gray-200 w-full">
+        <!-- Cards -->
         <div
-          class="flex items-center justify-between bg-white rounded-lg shadow-lg p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
+          class="flex flex-col sm:flex-row items-center justify-between bg-white rounded-lg shadow-lg p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
           <div class="flex-1">
             <h2 class="text-xl font-bold text-gray-800">Greener Tomorrow: 1,800+ Trees Planted</h2>
             <p class="text-gray-600 text-sm mt-2">
@@ -165,14 +161,13 @@
               healthier planet.
             </p>
           </div>
-          <div class="h-30 w-35 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-sm">
+          <div class="h-30 w-35 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-sm mt-4 sm:mt-0 sm:ml-4">
             <img src="/images/gogreennew.png" alt="">
           </div>
         </div>
 
-        <!-- Second Card -->
         <div
-          class="flex items-center justify-between bg-white rounded-lg shadow-lg p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
+          class="flex flex-col sm:flex-row items-center justify-between bg-white rounded-lg shadow-lg p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
           <div class="flex-1">
             <h2 class="text-xl font-bold text-gray-800">Swachhta Abhiyan: Weekly Cleanliness Drives in Thane</h2>
             <p class="text-gray-600 text-sm mt-2">
@@ -180,14 +175,13 @@
               cleaner city.
             </p>
           </div>
-          <div class="h-30 w-35 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-sm">
+          <div class="h-30 w-35 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-sm mt-4 sm:mt-0 sm:ml-4">
             <img src="/images/cleannew.png" alt="">
           </div>
         </div>
 
-        <!-- Third Card -->
         <div
-          class="flex items-center justify-between bg-white rounded-lg shadow-lg p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
+          class="flex flex-col sm:flex-row items-center justify-between bg-white rounded-lg shadow-lg p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
           <div class="flex-1">
             <h2 class="text-xl font-bold text-gray-800">Relief in Crisis: COVID-19 Support Initiatives</h2>
             <p class="text-gray-600 text-sm mt-2">
@@ -195,23 +189,22 @@
               left behind.
             </p>
           </div>
-          <div class="h-30 w-35 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-sm">
+          <div class="h-30 w-35 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-sm mt-4 sm:mt-0 sm:ml-4">
             <img src="/images/covid.png" alt="">
           </div>
         </div>
       </div>
-
-
     </div>
   </section>
-  <br>
-  <br>
-  <section class="mx-auto px-[100px] mt-[100px]">
+
+  <!-- Events Section -->
+  <section class="mx-auto px-4 md:px-[100px] mt-[100px]">
     <div class="flex justify-start m-4 mt-8">
-      <img class="w-50 h-auto" src="/images/our events.png" alt="Know Us" />
+      <img class="w-[200px] md:w-[280px] h-auto" src="/images/our events.png" alt="Our Events" />
     </div>
-    <div class="flex space-x-4 p-6 bg-gray-100 justify-center">
-      <!-- First Card -->
+
+    <div class="flex flex-col md:flex-row gap-4 p-6 bg-gray-100 justify-center items-center">
+      <!-- Event Cards -->
       <div
         class="flex items-center justify-between bg-green-200 rounded-lg p-6 w-80 shadow-lg transform transition duration-300 hover:scale-105 hover:bg-green-300 hover:shadow-xl">
         <div class="flex flex-col">
@@ -227,7 +220,6 @@
         </div>
       </div>
 
-      <!-- Second Card -->
       <div
         class="flex items-center justify-between bg-green-200 rounded-lg p-6 w-80 shadow-lg transform transition duration-300 hover:scale-105 hover:bg-green-300 hover:shadow-xl">
         <div class="flex flex-col">
@@ -243,20 +235,13 @@
         </div>
       </div>
     </div>
-
-
-
-
-
   </section>
-  <br>
-  <br>
-  <br>
+
+  <!-- Footer -->
   <%- include('partials/footer') %>
 </body>
 
 </html>
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -269,21 +254,21 @@
             const counter = entry.target;
             const target = +counter.getAttribute("data-target");
             let count = 0;
-            const increment = Math.ceil(target /200); // Adjust speed
+            const increment = Math.ceil(target / 200);
 
             function updateCounter() {
               count += increment;
               if (count > target) {
                 count = target;
               }
-              counter.innerText = count + "+"; // Ensuring "+" stays at the end
+              counter.innerText = count + "+";
               if (count < target) {
                 requestAnimationFrame(updateCounter);
               }
             }
 
             updateCounter();
-            observer.unobserve(counter); // Stop observing after animation
+            observer.unobserve(counter);
           }
         });
       },
