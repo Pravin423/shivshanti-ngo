@@ -72,6 +72,7 @@
         name: 'Shivshanti Pratishthan',
         description: 'Donation',
         order_id: orderData.id,
+        image: '/images/logo.png',
         handler: async function (response) {
           const verifyResponse = await fetch('/verify-payment', {
             method: 'POST',
