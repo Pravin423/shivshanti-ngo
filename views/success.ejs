@@ -1,53 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation Successful</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        .details {
-            text-align: left;
-            margin: 20px 0;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            margin: 5px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donation Successful</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      width: 100%;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 300px;
+      padding: 40px;
+    }
+
+    .image-container {
+      flex: 1;
+      min-width: 300px;
+      background: url('/images/success.png') no-repeat center center;
+      background-size:contain;
+    }
+
+    h1 {
+      color: #02C720;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtext {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .details {
+      text-align: left;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .details p {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-start;
+    }
+
+    button, .btn {
+      background-color: #02C720;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    button:hover, .btn:hover {
+      background-color: #029f1a;
+      transform: scale(1.05);
+    }
+
+    a.btn {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .flex-container {
+        flex-direction: column;
+      }
+
+      .image-container {
+        height: 250px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Thank You for Your Donation!</h1>
-    <p>Your contribution makes a difference.</p>
-    
-    <div class="details">
-        <h2>Donation Details</h2>
-        <p><strong>Name:</strong> <%= donation.name %></p>
-        <p><strong>Email:</strong> <%= donation.email %></p>
-        <p><strong>Amount:</strong> ₹<%= donation.amount %></p>
-        <p><strong>Payment ID:</strong> <%= donation.paymentId %></p>
-        <p><strong>Date:</strong> <%= donation.date.toLocaleDateString() %></p>
-        <p><strong>Receipt:</strong> <%= donation.receipt %></p>
-    </div>
+  <div class="overlay">
+    <div class="flex-container">
+      
+      <!-- Left Side: Card Content -->
+      <div class="card">
+        <h1>Thank You for Your Donation!</h1>
+        <p class="subtext">Your contribution makes a difference.</p>
 
-    <button onclick="window.location.href='/download-receipt/<%= donation.orderId %>'">Download Receipt</button>
-    <button onclick="window.location.href='/download-invoice/<%= donation.orderId %>'">Download Invoice</button>
-    <a href="/"><button >Home</button></a>
+        <div class="details">
+          <h2>Donation Details</h2>
+          <p><strong>Name:</strong> <%= donation.name %></p>
+          <p><strong>Email:</strong> <%= donation.email %></p>
+          <p><strong>Amount:</strong> ₹<%= donation.amount %></p>
+          <p><strong>Payment ID:</strong> <%= donation.paymentId %></p>
+          <p><strong>Date:</strong> <%= donation.date.toLocaleDateString() %></p>
+          <p><strong>Receipt:</strong> <%= donation.receipt %></p>
+        </div>
+
+        <div class="btn-group">
+          <button onclick="window.location.href='/download-receipt/<%= donation.orderId %>'">Download Receipt</button>
+          <button onclick="window.location.href='/download-invoice/<%= donation.orderId %>'">Download Invoice</button>
+          <a href="/" class="btn">Home</a>
+        </div>
+      </div>
+
+      <!-- Right Side: Background Image -->
+      <div class="image-container "></div>
+    </div>
+  </div>
 </body>
 </html>

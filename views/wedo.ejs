@@ -14,6 +14,22 @@
 
 
 </head>
+<style>
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slide-in {
+      animation: slideIn 1s ease-out forwards;
+    }
+  </style>
 
 <body>
     <header>
@@ -28,23 +44,19 @@
         <div class="relative bg-cover h-[400] w-full mx-auto" style="background-image: url('/images/whatwedoback.png')">
             <div class="flex flex-col md:flex-row items-start px-6 md:px-10 pt-20 ml-[20px]">
                 <section class="w-full md:w-[700px]">
-                    <h1 class="text-white text-5xl md:text-6xl font-bold leading-tight animate-slide-in">
-                        From <br />
-                        <span class="text-orange-500">
-                            Awarness
-                        </span>
-                        <br />
-                        To Action— <br />
-                        We Build A <br />
-                        <span class="text-[#02C720]">
-                            Greener
-                        </span>
-                        <br />
-                        Future .
-                    </h1>
-                    <br><br><br><br>
+  <h1 class="text-white text-5xl md:text-6xl font-bold leading-tight animate-slide-in">
+    From <br />
+    <span class="text-orange-500">Awarness</span><br />
+    To Action— <br />
+    We Build A <br />
+    <span class="text-[#02C720]">Greener</span><br />
+    Future .
+  </h1>
+  <br><br><br><br>
 
-                </section>
+  
+</section>
+
             </div>
 
         </div>
